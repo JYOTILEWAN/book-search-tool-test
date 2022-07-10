@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+1. How long did you spend on the coding assignment?
+   Ans-It took 5,6 hours.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+a. What would you add to your solution if you had more time?
+Ans-I would have added filter option along with sorting,as well as i would have created books details screen so user could click the book and view the deatil information about that book.
 
-## Available Scripts
+b. If you didn't spend much time on the coding test, then use this as an opportunity to explain what you would add.
+Ans- It took approx 1.5 hours for coding test.I would have added more time in business logic,functionality and design part of the application,because performance of application depends on this things.
 
-In the project directory, you can run:
+2. What was the most useful feature that was added to the latest version of your chosen language? Please include a snippet of code that shows how you've used it.
+   Ans- React 18 is new version of React.Recently added features in React 18 version Automatic batching,Suspense features,New strict mode behaviours,new hooks-useId,useTransition.
 
-### `npm start`
+I used lazyloading -
+const BooksSearchResult = lazy(() =>
+import("../components/BooksSearchResult/BooksSearchResult")
+);
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+const Books = () => {
+const { apiRequestStatus } = useBooksContext();
+return (
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<main>
+<Navbar />
+<section className="container">
+<BookSearchBox />
+{apiRequestStatus === "fulfilled" && <BooksSearchResult />}
+{apiRequestStatus === "loading" && <Spinner />}
+{apiRequestStatus === "failed" && (
+<h1 className="error-message">
+Something went wrong please try again later
+</h1>
+)}
+</section>
+</main>
+);
+};
 
-### `npm test`
+3. How would you track down a performance issue in production? Have you ever had to do this?
+   Ans-We can use external services to track performance of our app such as sentry it tells us is any bug in production app,it trace them and give us notification, Chrome Performance tab, a great resource to find issues,DevTools,Performance tab-profiling by reloading the page,Profiler API.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. How would you improve the API that you just used?
+   Ans-Limit Payloads- large payloads can take a long time to create on the server and even longer to download on a client. heavy payloads of data slow down processes and reduce performance.
+   Faster Network-Slow networks impact the performance of even the best designed APIs.
+   Caching is one of the best ways to improve API performance.
+   filtering plays an important part in optimizing an API.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+5. Please describe yourself using correctly formatted JSON.
+   const AboutJyoti =[
+   {
+   "name":"jyoti",
+   "age":30,
+   "Email": "jyoti.dee@example.org",
+   "BirthDate": "1945-07-04"
+   "qualification":"B.tech in computer engineering",
+   "address":"Canada"
+   }
