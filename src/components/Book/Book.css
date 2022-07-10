@@ -1,0 +1,23 @@
+.book-container {
+  width: 100%;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  padding: 2rem 1rem 2rem 2rem;
+  border-radius: 5px;
+  box-shadow: -1px 0px 6px 1px rgba(0, 0, 0, 0.18);
+}
+
+.book-cover {
+  width: 120px;
+  height: 160px;
+  margin-bottom: 0.5rem;
+}
+.book-title{
+    font-size: 1rem;
+}
+
+.book-title,
+.author-name,
+.publication-date {
+  margin-bottom: 0.5rem;
+}
