@@ -36,21 +36,22 @@ Something went wrong please try again later
 };
 
 3. How would you track down a performance issue in production? Have you ever had to do this?
-   Ans-We can use external services to track performance of our app such as sentry it tells us is any bug in production app,it trace them and give us notification, Chrome Performance tab, a great resource to find issues,DevTools,Performance tab-profiling by reloading the page,Profiler API.
+   Ans-We can use external services to track performance of our app such as sentry it tells us if any bug in production app,it trace them and give us notification, Chrome Performance tab, a great resource to find issues,DevTools,Performance tab-profiling by reloading the page,Profiler API.
 
 4. How would you improve the API that you just used?
-   Ans-Limit Payloads- large payloads can take a long time to create on the server and even longer to download on a client. heavy payloads of data slow down processes and reduce performance.
+   Ans-Api sending lots of unnecessary data,if we set it to minimal data for search results.Especially only the things we need to show in serach result.
+   Limit Payloads- large payloads can take a long time to create on the server and even longer to download on a client. heavy payloads of data slow down processes and reduce performance.
    Faster Network-Slow networks impact the performance of even the best designed APIs.
    Caching is one of the best ways to improve API performance.
    filtering plays an important part in optimizing an API.
 
 5. Please describe yourself using correctly formatted JSON.
-   const AboutJyoti =[
+   const AboutJyoti =
    {
    "name":"jyoti",
    "age":30,
-   "Email": "jyoti.dee@example.org",
-   "BirthDate": "1945-07-04"
+   "Email": "jyoti.lewan@gmail.com",
+   "BirthDate": "1990-04-14"
    "qualification":"B.tech in computer engineering",
    "address":"Canada"
    }
